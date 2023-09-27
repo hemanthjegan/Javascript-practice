@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Flipkart Shipping Calculator</h2>
+    <p>Orders Under Rs.550 = +39 shipping.</p>
+    <p>Orders Over Rs.550 = FREE shipping </p>
+    
+    <input type="number" class="input-box" required="" placeholder="Enter the amount" onkeydown="clickEnter()">
+    <button class="calc-btn" onclick="calcTotal()">Calculate</button>
+
+    <h3 class="amount"></h3>
+
+    
+    <script>
+
+        function clickEnter(){
+            console.log('typing...');  // It shows the cmd (typing...) while we writing in the input field
+            console.log(event);   // Event is an Object. It shows all the events in the js 
+            console.log(event.key);  // It shows what we are typing in the input field if we enter the button it shows 'Enter'.
+            if(event.key === 'Enter'){
+                calcTotal();
+            }
+        }
+
+        function calcTotal(){
+            let cost = Number(document.querySelector('.input-box').value); // type conversion from string to number because whenever get a value from DOM, the value will be string.
+
+            if(cost <= 550){
+                cost = cost + 69;
+            }
+
+            document.querySelector('.amount').innerHTML= `Total Amount : ${cost}`;
+        }
+
+    </script>
+</body>
+</html>

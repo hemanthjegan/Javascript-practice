@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Exercises</title>
+</head>
+<body>
+    <h4>YouTube Subscribe Button</h4>
+    <button class="sub-btn" onclick="subsBtn()">Subscribe</button>
+    
+    <script>
+
+        function subsBtn(){
+           let var1 = document.querySelector('.sub-btn');
+
+            if(var1.innerHTML === 'Subscribe'){   // innerText it inclueds only text while use innerHTML it includes space
+                var1.innerHTML = 'Subscribed';
+            }else{
+                var1.innerHTML = 'Subscribe';
+            }
+        }
+    </script>
+</body>
+</html>

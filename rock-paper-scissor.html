@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock-Paper-Scissor</title>
+</head>
+<body>
+
+    
+    <h1>Rock Paper Scissor</h1>
+    <button><span class="click-btn" onclick="rock()">Rock</span></button>
+    <button><span class="click-btn" onclick="paper()">Paper</span></button>
+    <button><span class="click-btn" onclick="scissor()">Scissor</span></button>
+    <p id="final-result"></p>
+     
+
+
+<script>
+
+    const randNumber = Math.random();
+    let randResult='';
+    if(randNumber >= 0 && randNumber < 1/3){
+        randResult = 'Rock';
+    }else if(randNumber >= 1/3 && randNumber < 2/3){
+       randResult = 'Paper';
+    }else if(randNumber >=2/3 && randNumber < 1){
+        randResult = 'Scissor';
+    }
+
+    function rock(){
+
+        let result = '';
+        if(randResult == 'Rock'){
+            result = 'Tie.';
+        }else if(randResult == 'Scissor'){
+            result = 'You Win.';
+        }else if(randResult == 'Paper'){
+            result = 'You Lose.';
+        }
+
+        document.getElementById('final-result').innerHTML=`You Picked Rock. Computer Picked ${randResult}. ${result}`;
+    }
+
+    function paper(){
+
+        let result = '';
+        if(randResult == 'Paper'){
+            result = 'Tie.';
+        }else if(randResult == 'Rock'){
+            result = 'You Win.';
+        }else if(randResult == 'Scissor'){
+            result = 'You Lose.';
+        }
+
+        document.getElementById('final-result').innerHTML=`You Picked Paper. Computer Picked ${randResult}. ${result}`;
+    }
+
+    function scissor(){
+
+        let result = '';
+        if(randResult == 'Scissor'){
+            result = 'Tie.';
+        }else if(randResult == 'Paper'){
+            result = 'You Win.';
+        }else if(randResult == 'Rock'){
+            result = 'You Lose.';
+        }
+
+        document.getElementById('final-result').innerHTML=`You Picked Scissor. Computer Picked ${randResult}. ${result}`;
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Exercises</title>
+</head>
+<body>
+    <button class="first-btn">Red</button>
+    <button class="second-btn">Blue</button>
+
+    <script>
+
+        // Bascics
+
+        /* document.body.innerHTML='Hiii';
+        document.title='title changed!';
+
+        console.log(document.title);
+        console.log(document.body);
+
+        console.log(document.body.innerHTML);
+        
+        document.body.innerHTML='<button>Good night</button>'; */
+
+        document.querySelector('button');
+        document.querySelector('button').innerHTML;
+        document.querySelector('button').innerHTML = 'changed';
+
+        document.querySelector('.first-btn');    // class selector
+        document.querySelector('.second-btn');
+
+        const var1 = document.querySelector('.second-btn').innerHTML;
+        console.log(var1)
+
+    </script>
+</body>
+</html>

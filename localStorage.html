@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Welcome</h1>
+    <button >Alter User</button>
+
+    <script>
+
+        /* let btn = document.querySelector('button');
+        let title = document.querySelector('h1');
+
+        btn.onclick = function(){
+            userDetails();
+        }
+
+        function userDetails(){
+            var name = prompt("Please enter your name");
+            console.log(localStorage.setItem('username', JSON.stringify(name)));
+            title.textContent=`welcome ${name}`;
+        }
+
+        if(!localStorage.getItem('username')){
+            userDetails();
+        }else{
+            let name = localStorage.getItem('username');
+            title.textContent=`welcome ${name}`;
+        } 
+
+        let score = {
+            wins : 0,
+            losses : 0,
+            ties : 0
+        } ;
+
+
+        let num = score.wins+=1;
+
+        let myobj = JSON.stringify(score);
+        console.log(myobj);
+
+        localStorage.setItem("score", myobj); 
+        console.log(localStorage);
+
+        let getobj = JSON.parse(localStorage.getItem('score'));
+        console.log(getobj);
+
+        
+        console.log(num); */
+       
+
+        let score = {
+            wins : 0,
+            losses : 0,
+            ties : 0
+        } ;
+
+
+        let num = score.wins+=2;
+
+ ;
+
+        localStorage.setItem("score", JSON.stringify(score)); 
+
+        let getobj = JSON.parse(localStorage.getItem('score'));
+
+
+        
+        console.log(getobj.wins += 1);
+    
+      
+
+    </script>
+</body>
+</html>
+
+
+
+
+<!--
+
+<html>
+<body>
+   <h2> Add an Object to localStorage in HTML5 using setItem() method </h2>
+   <label> Object: </label>
+   <div id="get-object"> </div>
+   <script>
+      
+      // Creating object
+      // this object will be saved to localhost
+      const objectRegion = {
+         Region: "Asia",
+         Country: "India"
+      }
+      
+      // defining key and value
+      const key = "object";
+      const value = JSON.stringify(objectRegion)
+      
+      // setting the key-value pair to localhost
+      window.localStorage.setItem(key, value);
+      
+      // Getting the key-value pair using the getItem() method with the key attribute
+      // getItem() method is used to get the value from localStorage using key
+      let object = window.localStorage.getItem(key);
+      
+      // Displaying the object.
+      let element = document.getElementById("get-object");
+      element.innerHTML = object;
+   </script>
+</body>
+</html>   
+
+-->
