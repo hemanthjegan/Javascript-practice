@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced functions</title>
+</head>
+<body>
+    
+
+    <script>
+        function greeting(){
+            console.log('Normal function');
+        }
+        greeting();
+
+        const func1 = function greeting(){
+            console.log('function are value in javascript');
+        };
+        console.log(func1);
+        console.log(typeof func1);
+        func1();
+
+        const func2 = function(){   //a function without name is called anonymous func
+            console.log('Anonymous function');
+        };
+        func2();
+
+        const obj = {
+            num: 23,
+            func: function greeting(){
+                console.log('object can support function');
+            }
+        };
+        obj.func();
+
+       const obj1 = {
+        num: 23,
+        func: function (){
+            console.log('object can support function');
+            }
+        };
+        obj1.func();
+
+        function display(param){
+            console.log(param);
+        }
+        display(23);
+        function run(param){
+            param();
+        }
+        run(function(){  // callback function
+            console.log('passing a function as parameter to another function');
+        });
+
+        console.log('---------------------------------------------------------');
+
+        // setTimeout() is a pre buit function it allows us to run a func in the future
+
+        setTimeout(function(){
+            console.log('timeout function');
+        }, 3000);  // first parameter- a func we want to run in future secont parameter- how long to wait before running this function(a number in millisecond) 1000 millisecond = 1 second
+        //It is called Asynchronous code it won't wait for a line to finish before going to the next line.
+
+        console.log('after settimeout function'); // it will display first it won't wait for settimeout
+
+        setTimeout(function(){
+            console.log('timeout function');
+            console.log('timeout2');  // synchronous code it will wait for one line going to the next line.
+        }, 3000);
+
+        console.log('after settimeout function'); // it will display first it won't wait for settimeout
+
+        setInterval(function(){
+            //console.log('Interval function');
+        }, 3000);  // first parameter- a func we want to run in future secont parameter- how long to wait before running this function(a number in millisecond)
+        // It will keep running the function every 3 seconds
+
+
+        // for each loop
+
+        [1,2,3,4,5].forEach(function(value){
+            console.log(value);
+        });
+
+        [1,2,3,4,5].forEach(function(value, index){
+            console.log(index);
+            console.log(value);
+        });
+
+        [1,2,3,4,5].forEach(function(value, index){
+            if(value == 3){  // foreach does not support continue insted we use return 
+                return;
+            }
+            console.log(index);
+            console.log(value);
+        });
+    </script>
+</body>
+</html>

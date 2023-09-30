@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays-Loops</title>
+</head>
+<body>
+
+
+
+    <script>
+        const arr = [1,2,3,4,5,6];
+        console.log(arr);
+        console.log(arr[5]);
+
+        const a = [1, 'hello', true, {name: 'Raja'}, [1,2,]];
+        console.log(a);
+
+        console.log(typeof [1,2]);
+        console.log(Array.isArray([1,2]));
+
+        console.log(arr.length);
+ 
+        arr.push(7);
+        console.log(arr);
+
+        arr.splice(3, 2);   // first index number(start) second number of values to remove
+        console.log(arr);
+
+
+        let n = 0;
+
+        while(n < 10){
+            console.log(n);
+            n++;
+        }
+
+        for(let n=0; n<10; n++){
+            console.log(n);
+        }
+
+        let randNumber = 0;
+
+        while(randNumber < 0.7){
+            randNumber = Math.random();
+        }
+        console.log(randNumber);
+
+
+
+        const arr1 = [1,2,3];  // Arrays are references. the values([1,2,3]) are not stored in variables(arr1) it stored in memory. variable arr1 is the reference to those values
+        const arrr2 = arr1; //arr2 variable not stored the value of arr1. It stored the reference of arr1. now the arr2 pointing the same array as arr1
+
+        console.log(arr1);
+        console.log(arr2);
+
+        const arrr3 = arr1; // to avoid the pointing same arr use slice() to point different array.
+        console.log(arr3); 
+
+    </script>
+</body>
+</html> 
